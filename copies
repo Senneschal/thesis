@@ -97,3 +97,6 @@ while i<j:
     #np.savez_compressed(''+str(i), vol*seg)
     print(i)
     i+=1
+
+
+seg = scipy.ndimage.binary_dilation(segmented_lungs_fill, iterations=5).astype(int)
