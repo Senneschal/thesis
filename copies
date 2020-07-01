@@ -1,3 +1,19 @@
+import pylidc as pl
+import numpy as np
+import matplotlib.pyplot as plt
+
+from skimage import measure, morphology
+import scipy.ndimage
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from skimage import measure
+
+import re
+
+import os
+
+os.chdir('D:/Lungs')
+
+
 def largest_label_volume(im, bg=-1):
     vals, counts = np.unique(im, return_counts=True)
 
